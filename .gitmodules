@@ -8,3 +8,6 @@
 	path = linc_skeleton
 	url = https://github.com/darmie/linc_skeleton
 
+[submodule "linc_oggz"]
+	path = linc_oggz
+	url = https://github.com/darmie/linc_oggz
