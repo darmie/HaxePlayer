@@ -1,0 +1,3 @@
+# @install: lix --silent download "gh://github.com/darmie/linc_skeleton#058bf57bf7e46468559e77011ea37618a4694a30" into linc_skeleton/0.0.0/github/058bf57bf7e46468559e77011ea37618a4694a30
+-cp ${HAXE_LIBCACHE}/linc_skeleton/0.0.0/github/058bf57bf7e46468559e77011ea37618a4694a30/
+-D linc_skeleton=0.0.0

@@ -1,0 +1,3 @@
+# @install: lix --silent download "gh://github.com/darmie/linc_nestegg#6b7d20f8f4df8c97dd1f5627b8fe0525732c5e00" into linc_nestegg/0.0.0/github/6b7d20f8f4df8c97dd1f5627b8fe0525732c5e00
+-cp ${HAXE_LIBCACHE}/linc_nestegg/0.0.0/github/6b7d20f8f4df8c97dd1f5627b8fe0525732c5e00/
+-D linc_nestegg=0.0.0

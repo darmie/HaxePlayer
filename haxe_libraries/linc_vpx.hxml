@@ -1,0 +1,5 @@
+# @install: lix --silent download "gh://github.com/darmie/linc_vpx#294543bb6f5267607aae0c26d1d5349ad0016a42" into linc_vpx/0.0.0/github/294543bb6f5267607aae0c26d1d5349ad0016a42
+-lib hxcpp
+-lib linc_stb
+-cp ${HAXE_LIBCACHE}/linc_vpx/0.0.0/github/294543bb6f5267607aae0c26d1d5349ad0016a42/
+-D linc_vpx=0.0.0

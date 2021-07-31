@@ -1,0 +1,3 @@
+# @install: lix --silent download "gh://github.com/darmie/linc_opus#e3932346a45af8ad1fd6e00ff83ff738d5aacc52" into linc_opus/0.0.0/github/e3932346a45af8ad1fd6e00ff83ff738d5aacc52
+-cp ${HAXE_LIBCACHE}/linc_opus/0.0.0/github/e3932346a45af8ad1fd6e00ff83ff738d5aacc52/
+-D linc_opus=0.0.0

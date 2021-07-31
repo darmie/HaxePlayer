@@ -1,0 +1,4 @@
+# @install: lix --silent download "gh://github.com/darmie/linc_skeleton#2780f4c26615de360bbe715f77ea03da2a278e49" into Skeleton/0.0.1/github/2780f4c26615de360bbe715f77ea03da2a278e49
+-lib linc_oggz
+-cp ${HAXE_LIBCACHE}/Skeleton/0.0.1/github/2780f4c26615de360bbe715f77ea03da2a278e49/
+-D Skeleton=0.0.1

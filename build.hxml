@@ -1,0 +1,13 @@
+-cp linc_nestegg/
+-cp linc_oggz/
+-cp linc_opus/
+-cp linc_skeleton/
+-cp src/
+-cpp bin/HaxePlayer
+
+
+# -lib linc_oggz
+# -lib linc_opus
+# -lib linc_nestegg
+# -lib Skeleton
+
