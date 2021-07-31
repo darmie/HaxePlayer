@@ -1,0 +1,10 @@
+[submodule "linc_nestegg"]
+	path = linc_nestegg
+	url = https://github.com/darmie/linc_nestegg
+[submodule "linc_opus"]
+	path = linc_opus
+	url = https://github.com/darmie/linc_opus
+[submodule "linc_skeleton"]
+	path = linc_skeleton
+	url = https://github.com/darmie/linc_skeleton
+
