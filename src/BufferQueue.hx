@@ -1,4 +1,5 @@
 // Copyright (c) 2013-2019 Brion Vibber and other contributors
+// Copyright (c) 2021 Damilare Akinlaja
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to deal
 // in the Software without restriction, including without limitation the rights
@@ -14,6 +15,10 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+import cpp.NativeArray;
+import cpp.Pointer;
+import cpp.UInt8;
+import cpp.RawPointer;
 import haxe.io.BytesOutput;
 import haxe.io.BytesInput;
 import haxe.Int64;
@@ -110,7 +115,7 @@ class BufferQueue {
 		pos = 0;
 	}
 
-	public function append(data:BytesOutput, len:Int) {
+	public function append(data:Bytes, len:Int) {
 		if (len == max) {
 			trim();
 		}
@@ -129,13 +134,13 @@ class BufferQueue {
 		len++;
 	}
 
-	public function read(data:Bytes, size:Int) {
+	public function read(data:RawPointer<UInt8>, size:Int) {
 		if (headroom() < len) {
 			return -1;
 		}
 
-		var offset = 0;
-		var remaining = 0;
+		var offset:Int64 = 0;
+		var remaining:Int64 = 0;
 
 		for (i in 0...len) {
 			if (items[i].start + items[i].len < pos) {
@@ -150,8 +155,10 @@ class BufferQueue {
 			}
 
             var buf = new BytesOutput();
-            buf.writeInput(new BytesInput(items[i].bytes, Int64.toInt(chunkStart), chunkLen), chunkLen);
-            data.writeBytes(buf.getBytes(), offset, chunkLen);
+            buf.writeInput(new BytesInput(items[i].bytes, Int64.toInt(chunkStart), Int64.toInt(chunkLen)), Int64.toInt(chunkLen));
+            //data.writeBytes(buf.getBytes(), offset, Int64.toInt(chunkLen));
+			untyped __cpp__("memcpy({0} + {1}, {2} + {3}, {4})", data, offset, Pointer.ofArray(buf.getBytes().getData()).raw, chunkStart, chunkLen);
+
 
             pos += chunkLen;
             offset += chunkLen;
