@@ -11,3 +11,6 @@
 [submodule "linc_oggz"]
 	path = linc_oggz
 	url = https://github.com/darmie/linc_oggz
+[submodule "linc_vpx"]
+	path = linc_vpx
+	url = https://github.com/darmie/linc_vpx
